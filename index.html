@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Thota Bhargavi — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent1:#6ee7b7;
+      --accent2:#60a5fa;
+      --glass: rgba(255,255,255,0.04);
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; margin:0; background:linear-gradient(180deg,#071022 0%, #071826 60%); color:#e6eef6; -webkit-font-smoothing:antialiased}
+    .container{max-width:980px;margin:36px auto;padding:28px}
+
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:14px}
+
+    .avatar{width:64px;height:64px;border-radius:16px;display:grid;place-items:center;font-weight:700;font-size:20px;background:linear-gradient(135deg,var(--accent1),var(--accent2));color:#022;box-shadow:0 6px 20px rgba(6,12,30,0.6)}
+    h1{font-size:20px;margin:0}
+    p.tag{margin:0;color:var(--muted);font-size:13px}
+
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+    nav a:hover{color:var(--accent2)}
+
+    .hero{margin-top:28px;background:var(--glass);padding:22px;border-radius:14px;display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center}
+    .intro h2{margin:0 0 8px 0;font-size:22px}
+    .intro p{margin:0;color:var(--muted)}
+    .cta a{display:inline-block;background:linear-gradient(90deg,var(--accent2),var(--accent1));color:#022;padding:10px 14px;border-radius:10px;font-weight:700;text-decoration:none}
+
+    section{margin-top:22px}
+    .card{background:var(--card);padding:18px;border-radius:12px}
+    .grid{display:grid;gap:14px}
+
+    .badges{display:flex;flex-wrap:wrap;gap:10px}
+    .badge{background:rgba(255,255,255,0.03);padding:8px 12px;border-radius:999px;font-weight:600;color:var(--muted)}
+
+    .projects{display:grid;gap:12px}
+    .proj{display:flex;gap:12px;align-items:flex-start;border-radius:10px;padding:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent)}
+    .proj .meta{flex:1}
+    .proj h3{margin:0 0 6px 0}
+    .proj p{margin:0;color:var(--muted);font-size:14px}
+    .proj .tags{margin-top:8px}
+    .small{font-size:13px;color:var(--muted)}
+
+    .btn-light{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px 12px;border-radius:10px;color:var(--muted);text-decoration:none}
+
+    footer{margin-top:30px;text-align:center;color:var(--muted);font-size:13px;padding:18px}
+
+    @media (max-width:720px){
+      .hero{grid-template-columns:1fr}
+      header{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <div class="brand">
+        <div class="avatar" aria-hidden="true">TB</div>
+        <div>
+          <h1>THOTA BHARGAVI</h1>
+          <p class="tag">Beginner Web Developer • Learning HTML & CSS</p>
+        </div>
+      </div>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <div class="intro">
+        <h2>Hi — I build clean, accessible web interfaces.</h2>
+        <p>I’m a web developer focused on HTML, CSS and vanilla JavaScript. I enjoy turning ideas into polished interfaces and learning new tooling.</p>
+      </div>
+      <div class="cta">
+        <a href="#projects">See my work</a>
+      </div>
+    </div>
+
+    <section id="about" class="card">
+      <h2 style="margin-top:0">About</h2>
+      <div class="grid">
+        <p class="small">I am a beginner web developer currently learning HTML, CSS, and Java. I enjoy creating simple, clean web pages and improving my skills through practice.</p>
+        <p class="small">My goal is to take on small projects and eventually build fully responsive and interactive websites.</p>
+      </div>
+    </section>
+
+    <section id="skills" class="card">
+      <h2 style="margin-top:0">Skills</h2>
+      <div class="badges">
+        <span class="badge">HTML (Beginner)</span>
+        <span class="badge">CSS (Beginner)</span>
+        <span class="badge">Java (Beginner)</span>
+        <span class="badge">Basic Web Page Creation</span>
+        <span class="badge">Responsive Layout Basics</span>
+        <span class="badge">Visual Studio Code</span>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION (Cleaned) -->
+    <section id="projects" class="card">
+      <h2 style="margin-top:0">Projects</h2>
+
+      <div class="projects">
+        <article class="proj">
+          <div class="meta">
+            <h3>Notes App (Personal Productivity Web Application)</h3>
+            <p class="small">
+              Developed a cloud-based notes management application using the MERN stack. 
+              Features include authentication, CRUD operations, and a responsive UI.
+            </p>
+            <div class="tags">
+              <span class="badge">MongoDB</span>
+              <span class="badge">Express.js</span>
+              <span class="badge">React.js</span>
+              <span class="badge">Node.js</span>
+            </div>
+          </div>
+          <div style="text-align:right;min-width:80px" class="small">Live • GitHub</div>
+        </article>
+      </div>
+
+    </section>
+
+    <section id="resume" class="card">
+      <h2 style="margin-top:0">Resume</h2>
+      <p class="small">Download my resume (PDF):</p>
+      <a class="btn-light" href="resume.pdf" download>Download Resume (PDF)</a>
+    </section>
+
+    <section id="contact" class="card">
+      <h2 style="margin-top:0">Contact</h2>
+      <p class="small">Email: <a href="mailto:bhargavijk23063@gmail.com">bhargavijk23063@gmail.com</a></p>
+      <p class="small">Phone: +91 xxxxxxxxxx</p>
+      <p class="small">Or reach out on <a href="#">LinkedIn</a> / <a href="#">Twitter</a>.</p>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> Thota Bhargavi — Built with HTML & CSS</div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
